@@ -1,0 +1,18 @@
+* {
+    -fx-default-app-background-color: rgba(211, 211, 211, 0.4);
+    -fx-default-color: #192a56;
+    -fx-default-hover-color: derive(-fx-default-color, 40%);
+    -fx-default-selected-color: derive(-fx-default-color, 50%);
+    -fx-default-pressed-color: derive(-fx-default-color, 70%);
+    -fx-red-separator-color: derive(-fx-default-color, 70%);
+    -fx-default-rippler-color: white;
+    -fx-default-text-color: white;
+
+    -fx-primary-shadow-color: black;
+    -fx-secondary-shadow-color: -fx-default-color;
+    -fx-10-primary-shadow-opacity: rgba(0, 0, 0, 0.1);
+    -fx-30-primary-shadow-opacity: rgba(0, 0, 0, 0.3);
+    -fx-80-primary-shadow-opacity: rgba(0, 0, 0, 0.8);
+    -fx-30-secondary-shadow-opacity: #192a564D;
+    -fx-80-secondary-shadow-opacity: #192a56CC;
+}

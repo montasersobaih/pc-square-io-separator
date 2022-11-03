@@ -1,0 +1,22 @@
+@import "../global-colors.css";
+@import "scroll-bar.css";
+
+.scroll-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 3;
+    -fx-background-insets: 0;
+}
+
+.scroll-pane:focused {
+    -fx-border-color: -fx-default-color;
+    -fx-border-radius: 3;
+    -fx-background-insets: 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .corner {
+    -fx-background-insets: 0;
+}

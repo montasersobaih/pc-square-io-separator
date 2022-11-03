@@ -1,0 +1,23 @@
+@import "../../global-colors.css";
+@import "../../control/label.css";
+
+.root-pane {
+    -fx-padding: 5;
+    -fx-background-radius: 3;
+    -fx-background-color: white;
+    -fx-border-radius: 3;
+    -fx-border-color: -fx-default-color;
+}
+
+.root-pane > .title {
+    -fx-pref-height: 30;
+    -fx-max-width: infinity;
+    -fx-alignment: top_center;
+}
+
+.root-pane .root-pane {
+    -fx-background-radius: 3;
+    -fx-background-color: white;
+    -fx-border-color: darkgray;
+    -fx-effect: dropshadow(gaussian, -fx-30-primary-shadow-opacity, 10, 0, 0, 0);
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:id="choosePane" cache="true" cacheHint="SPEED" focusTraversable="true" styleClass="pane"
+            stylesheets="@../../assist/css/interface/dialog/choose-dialog.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <Label alignment="TOP_LEFT" styleClass="title" text="%control.label.export.to"/>
+    </top>
+    <center>
+        <VBox alignment="CENTER_LEFT" styleClass="radio-button-box" BorderPane.alignment="CENTER">
+            <JFXRadioButton id="single-file" onMouseClicked="#onRadioButtonClicked" focusTraversable="false"
+                            maxWidth="1.7976931348623157E308" prefHeight="40.0" text="%control.radio-button.file.excel">
+                <toggleGroup>
+                    <ToggleGroup fx:id="group1"/>
+                </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton id="multiple-files" onMouseClicked="#onRadioButtonClicked" focusTraversable="false"
+                            maxWidth="1.7976931348623157E308" prefHeight="40.0" text="%control.radio-button.file.io"
+                            toggleGroup="$group1"/>
+        </VBox>
+    </center>
+</BorderPane>

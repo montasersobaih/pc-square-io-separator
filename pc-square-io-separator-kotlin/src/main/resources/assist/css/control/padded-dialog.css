@@ -1,0 +1,6 @@
+@import "../global-colors.css";
+@import "dialog.css";
+
+.pane {
+    -fx-padding: 5;
+}
