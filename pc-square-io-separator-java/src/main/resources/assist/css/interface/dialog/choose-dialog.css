@@ -1,0 +1,13 @@
+@import "../../global-colors.css";
+@import "../../control/label.css";
+@import "../../control/radio-button.css";
+@import "../../control/padded-dialog.css";
+
+.pane {
+    -fx-pref-width: 300;
+    -fx-pref-height: 115;
+}
+
+.radio-button-box {
+    -fx-padding: 0 5 0 5;
+}

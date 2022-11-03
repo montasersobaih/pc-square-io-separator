@@ -1,0 +1,26 @@
+@import "../global-colors.css";
+@import "scroll-pane.css";
+
+.text-area {
+    -fx-accent: -fx-default-color; /*for text selection color*/
+    /*-fx-focus-color: rgba(202, 65, 69, 0.5);*/
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 3;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-area:focused {
+    -fx-border-color: -fx-default-color;
+}
+
+.text-area:disabled {
+    -fx-prompt-text-fill: black;
+}
+
+/*override scroll-bar design*/
+.text-area > .scroll-pane:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+}

@@ -1,0 +1,7 @@
+@import "../global-colors.css";
+
+Text {
+    -fx-font-weight: bold;
+    -fx-fill: #828282;
+    /*-fx-font-size: 11pt;*/
+}
