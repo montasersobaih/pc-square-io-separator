@@ -1,0 +1,24 @@
+@import "../global-colors.css";
+
+.menu-item {
+    -fx-padding: 5;
+    -fx-pref-width: 150;
+    /*-fx-text-fill: black;*/
+    /*-fx-background: darkgray;*/
+}
+
+.menu-item:hover,
+.menu-item:showing {
+    -fx-background-color: -fx-default-color;
+}
+
+.menu-item .label {
+    /*-fx-font-size: 14.0pt;*/
+    /*-fx-text-fill: black;*/
+}
+
+.menu-item .label:hover {
+    /*-fx-font-size: 14.0pt;*/
+    /*-fx-background: black;*/
+    /*-fx-text-fill: white;*/
+}

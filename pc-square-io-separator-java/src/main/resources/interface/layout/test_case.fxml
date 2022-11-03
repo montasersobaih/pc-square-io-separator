@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<BorderPane fx:id="testCasePane" minHeight="-Infinity" minWidth="-Infinity" styleClass="root-pane"
+            stylesheets="@../../assist/css/interface/layout/test-case.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mj.pc.square.io.separator.java.controller.layout.TestCaseLayoutController">
+    <top>
+        <Label fx:id="title" styleClass="title" text="%control.label.title" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <GridPane cache="true" cacheHint="SPEED" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" percentWidth="10.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <fx:include fx:id="input" source="data.fxml"/>
+            <Separator orientation="VERTICAL" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                <padding>
+                    <Insets left="8.0" right="6.0"/>
+                </padding>
+            </Separator>
+            <fx:include fx:id="output" source="data.fxml" GridPane.columnIndex="2"/>
+        </GridPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,16 @@
+@import "../../global-colors.css";
+@import "../../control/dialog.css";
+@import "../../control/progress-indicator.css";
+@import "../../control/label.css";
+
+.pane {
+    -fx-pref-width: 300;
+    -fx-pref-height: 120;
+    -fx-padding: 15 5 15 15;
+}
+
+.body {
+    -fx-font-size: 15px;
+    -fx-text-fill: #828282;
+    -fx-wrap-text: true;
+}

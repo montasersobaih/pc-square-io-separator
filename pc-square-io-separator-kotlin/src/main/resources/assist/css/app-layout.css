@@ -1,0 +1,5 @@
+@import "global-colors.css";
+
+.app-layout, .root {
+    -fx-background-color: -fx-default-app-background-color;
+}
