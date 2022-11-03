@@ -5,9 +5,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mj</groupId>
-    <artifactId>pc-square-test-separator</artifactId>
+    <artifactId>pc-square-io-separator-kotlin</artifactId>
     <version>1.0</version>
-    <name>pc-square-test-separator</name>
+    <name>pc-square-io-separator-kotlin</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
