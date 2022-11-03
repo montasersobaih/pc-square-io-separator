@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<StackPane fx:id="viewPane" stylesheets="@../assist/css/interface/view.css" xmlns="http://javafx.com/javafx/8.0.171"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.mj.pc.square.io.separator.java.controller.ViewController">
+    <BorderPane>
+        <center>
+            <BorderPane prefHeight="500.0" prefWidth="800.0" styleClass="pane">
+                <top>
+                    <StackPane BorderPane.alignment="CENTER">
+                        <Label alignment="CENTER" text="%control.label.case.test">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="exportationButton" focusTraversable="false"
+                                   onAction="#dataExportationButtonAction" text="%control.button.export"
+                                   StackPane.alignment="CENTER_RIGHT"/>
+                    </StackPane>
+                </top>
+                <center>
+                    <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+                        <VBox fx:id="data" alignment="TOP_CENTER" spacing="5"/>
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        </padding>
+                        <BorderPane.margin>
+                            <Insets top="8.0"/>
+                        </BorderPane.margin>
+                    </ScrollPane>
+                </center>
+            </BorderPane>
+        </center>
+        <top>
+            <MenuBar BorderPane.alignment="CENTER">
+                <Menu mnemonicParsing="false" text="%control.menu.bar.file">
+                    <MenuItem id="import-file" onAction="#onMenuItemAction" mnemonicParsing="false"
+                              text="%control.menu.item.import.file"/>
+                    <MenuItem id="import-folder" onAction="#onMenuItemAction" mnemonicParsing="false"
+                              text="%control.menu.item.import.folder"/>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem id="close" onAction="#onMenuItemAction" mnemonicParsing="false"
+                              text="%control.menu.item.close"/>
+                </Menu>
+                <Menu mnemonicParsing="false" text="%control.menu.bar.edit"/>
+                <Menu mnemonicParsing="false" text="%control.menu.bar.help">
+                    <MenuItem id="about" onAction="#onMenuItemAction" mnemonicParsing="false"
+                              text="%control.menu.item.about"/>
+                </Menu>
+            </MenuBar>
+        </top>
+    </BorderPane>
+</StackPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:id="loadingPane"
+            cache="true" cacheHint="SPEED" focusTraversable="true" styleClass="pane"
+            stylesheets="@../../assist/css/interface/dialog/loading-dialog.css">
+    <left>
+        <ProgressIndicator cache="true" cacheHint="SPEED" minHeight="-Infinity" minWidth="-Infinity"
+                           BorderPane.alignment="CENTER"/>
+    </left>
+    <center>
+        <Label fx:id="loadingBody" alignment="BASELINE_LEFT" maxHeight="1.7976931348623157E308"
+               maxWidth="1.7976931348623157E308" styleClass="body" text="%control.label.wait.please"
+               textAlignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10"/>
+            </BorderPane.margin>
+        </Label>
+    </center>
+    <styleClass>
+        <String fx:value="pane"/>
+    </styleClass>
+</BorderPane>
