@@ -1,0 +1,6 @@
+@import "../global-colors.css";
+@import "../control/label.css";
+
+.jfx-radio-button {
+    -jfx-selected-color: -fx-default-color;
+}

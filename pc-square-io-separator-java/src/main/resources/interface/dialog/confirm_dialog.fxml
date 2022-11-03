@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+<BorderPane fx:id="confirmPane" cache="true" cacheHint="SPEED" focusTraversable="true" styleClass="pane"
+            stylesheets="@../../assist/css/interface/dialog/confirm-dialog.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <Label fx:id="confirmTitle" alignment="TOP_LEFT" styleClass="title" text="%control.label.confirm"/>
+    </top>
+    <center>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT">
+            <JFXButton onAction="#onDeclineButton" text="%control.button.cancel"/>
+            <JFXButton onAction="#onConfirmButton" text="%control.button.confirm"/>
+        </HBox>
+    </bottom>
+    <center>
+        <WebView fx:id="confirmBody" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="CENTER">
+        </WebView>
+    </center>
+</BorderPane>
