@@ -1,0 +1,10 @@
+@import "../global-colors.css";
+
+.progress-indicator {
+    -fx-pref-width: 53;
+    -fx-max-width: 53;
+    -fx-pref-height: 60;
+    -fx-max-height: 60;
+    -fx-spin-enabled: true;
+    -fx-progress-color: -fx-default-color;
+}
