@@ -14,7 +14,6 @@ import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioButton;
@@ -22,7 +21,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Window;
 
 import java.net.URL;
 import java.util.List;
@@ -53,7 +51,11 @@ public final class ViewController extends BaseController {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        viewPane.widthProperty().addListener(this::onViewPaneWidthChanged);
+        viewPane.sceneProperty().addListener((i1, i2, scene) -> {
+            scene.windowProperty().addListener((i3, i4, window) -> {
+                window.setOnCloseRequest(ignored -> executor.shutdown());
+            });
+        });
         exportationButton.disableProperty().bind(Bindings.isEmpty(data.getChildren()));
     }
 
@@ -92,16 +94,6 @@ public final class ViewController extends BaseController {
                     .setOnRadioButtonClicked(this::onRadioButtonClicked)
                     .build()
                     .show();
-        }
-    }
-
-    private void onViewPaneWidthChanged(Object ignored1, Object ignored2, Object ignored3) {
-        Scene scene = viewPane.getScene();
-        if (Objects.nonNull(scene.getWindow())) {
-            Window window = scene.getWindow();
-            if (Objects.isNull(window.getOnCloseRequest())) {
-                window.setOnCloseRequest(event -> executor.shutdown());
-            }
         }
     }
 

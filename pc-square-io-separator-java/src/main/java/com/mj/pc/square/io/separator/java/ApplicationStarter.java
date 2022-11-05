@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 public final class ApplicationStarter extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         Pane pane = FXMLUtil.loadInterface(UInterface.APPLICATION_PAGE);
 
         stage.setTitle("PC^2 Test Case Separator");
